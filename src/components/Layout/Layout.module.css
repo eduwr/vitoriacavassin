@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: red 1px solid;
+  padding: 24px;
+}
+
+.header img {
+  height: 232px;
+  width: 332px;
+}
+
+.nav {
+  margin-top: 32px;
+}
+
+.nav a {
+  padding: 0 40px 0 40px;
+  font-size: 24px;
+  border-right: 2px black solid;
+  transition: all 300ms ease;
+}
+
+.nav a:last-child {
+  border-right: none;
+}
+
+.nav a:hover {
+  opacity: 0.5;
+}
+
+.textYellow {
+  color: #d9a13c;
+}
