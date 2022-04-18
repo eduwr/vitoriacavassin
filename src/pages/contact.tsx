@@ -1,18 +1,19 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+
 import styles from "../styles/Home.module.css";
 
-const Home: NextPage = (props) => {
+const Contact: NextPage = (props) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Vitória Cavassin | Home</title>
+        <title>Vitória Cavassin | Contato</title>
         <meta name="description" content="Vitória Cavassin Arquiteta" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>Contact</h1>
     </div>
   );
 };
 
-export default Home;
+export default Contact;
