@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: red 1px solid;
   padding: 24px;
 }
 
@@ -19,6 +18,7 @@
 .nav a {
   padding: 0 40px 0 40px;
   font-size: 24px;
+  font-weight: 300;
   border-right: 2px black solid;
   transition: all 300ms ease;
 }
@@ -33,4 +33,67 @@
 
 .textYellow {
   color: #d9a13c;
+}
+
+.footer {
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  padding: 60px 100px;
+  border-bottom: solid 1px #676767;
+}
+
+.contact h3 {
+  font-size: 42px;
+  color: #d9a13c;
+  font-weight: 300;
+}
+
+.contact p {
+  color: #676767;
+  font-size: 20px;
+}
+
+.info {
+  padding: 60px 100px;
+  display: flex;
+}
+
+.address {
+  max-width: 280px;
+  margin-right: 60px;
+}
+
+.address h3 {
+  color: #000000;
+  font-size: 32px;
+}
+
+.address p {
+  color: #676767;
+  font-size: 16px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links h3 {
+  color: #000000;
+  font-size: 32px;
+}
+
+.links a {
+  color: #676767;
+  font-size: 16px;
+  margin-bottom: 16px;
+  transition: all 300ms ease;
+}
+
+.links a:hover {
+  text-decoration: underline;
 }

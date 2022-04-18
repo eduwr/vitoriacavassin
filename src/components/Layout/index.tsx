@@ -38,7 +38,30 @@ export const Layout = ({ children }: Props) => {
         </nav>
       </header>
       <main>{children}</main>
-      <footer></footer>
+      <footer className={styles.footer}>
+        <div className={styles.contact}>
+          <h3>vitoria@vitoriacavassin.com</h3>
+          <p>
+            Let tell us know your dream and we will help you make it become
+            reality
+          </p>
+        </div>
+        <div className={styles.info}>
+          <div className={styles.address}>
+            <h3>Escritório</h3>
+            <p>Rua Marechal Floriano Peixoto, 196 Curitiba - PR</p>
+            <p>CEP 88140-000</p>
+          </div>
+          <div className={styles.links}>
+            <h3>Links</h3>
+            {pages.map(({ key, to }) => (
+              <Link key={key} href={to}>
+                <a>{key}</a>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
