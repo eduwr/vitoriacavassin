@@ -60,7 +60,25 @@ export const Layout = ({ children }: Props) => {
               </Link>
             ))}
           </div>
+          <div className={styles.icons}>
+            <a
+              className={styles.roundIcon}
+              target="_blank"
+              href="https://www.instagram.com/vitoriacavassinarquiteta"
+              rel="noreferrer"
+            >
+              <Image
+                alt="Instagram"
+                src="/icons/instagram.png"
+                width={24}
+                height={24}
+              />
+            </a>
+          </div>
         </div>
+        <p className={styles.developerInfo}>
+          Development By <span>Wilk Technology</span>
+        </p>
       </footer>
     </>
   );
