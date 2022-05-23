@@ -11,7 +11,12 @@ module.exports = {
       bgLight: "#f8f9fa",
       white: "#ffffff",
     },
-    extend: {},
+    extend: {
+      height: {
+        "1/2-screen": "50vh",
+        "3/4-screen": "75vh",
+      },
+    },
   },
   plugins: [],
 };
