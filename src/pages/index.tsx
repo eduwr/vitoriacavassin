@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+
 import { Carousel } from "../components/Carousel";
-import styles from "../styles/Home.module.css";
+import { Presentation } from "../components/Presentation";
 
 const Home: NextPage = (props) => {
   return (
@@ -13,6 +13,7 @@ const Home: NextPage = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Carousel />
+      <Presentation />
     </div>
   );
 };

@@ -8,13 +8,16 @@ module.exports = {
       yellow: "#d9a13c",
       grey: "#676767",
       black: "#000000",
-      bgLight: "#f8f9fa",
+      light: "#f8f9fa",
       white: "#ffffff",
     },
     extend: {
       height: {
         "1/2-screen": "50vh",
         "3/4-screen": "75vh",
+      },
+      maxWidth: {
+        "1/2": "50%",
       },
     },
   },
