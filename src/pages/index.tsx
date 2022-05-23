@@ -6,7 +6,7 @@ import { Presentation } from "../components/Presentation";
 
 const Home: NextPage = (props) => {
   return (
-    <div className="">
+    <div className="container">
       <Head>
         <title>Vitória Cavassin | Home</title>
         <meta name="description" content="Vitória Cavassin Arquiteta" />
