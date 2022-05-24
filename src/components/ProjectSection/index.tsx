@@ -1,12 +1,4 @@
-import Image from "next/image";
-import { ProjectCard } from "../ProjectCard";
-
-interface Project {
-  id: string;
-  photoUrl: string;
-  title: string;
-  description: string;
-}
+import { Project, ProjectCard } from "../ProjectCard";
 
 const project: Project = {
   id: "id",

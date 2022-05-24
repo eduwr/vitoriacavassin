@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-interface Project {
+export interface Project {
+  id: string;
   photoUrl: string;
   title: string;
   description: string;
