@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export const Presentation = () => (
-  <section className="flex justify-between items-center py-16 px-40 w-full h-1/2-screen relative bg-light">
+  <section className="flex justify-evenly items-center py-16 px-40 w-full h-1/2-screen relative bg-light">
     <div className="h-96 w-96 rounded-full relative overflow-hidden">
       <Image
         src="/assets/images/profile.png"

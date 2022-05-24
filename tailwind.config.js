@@ -15,6 +15,7 @@ module.exports = {
       height: {
         "1/2-screen": "50vh",
         "3/4-screen": "75vh",
+        section: "37.5rem",
       },
       maxWidth: {
         "1/2": "50%",
