@@ -4,6 +4,7 @@ import resources from "../../data/resources.json";
 
 export const Carousel = () => {
   const [current, setCurrent] = useState(0);
+  const [timer, setTimer] = useState<NodeJS.Timer>();
 
   useEffect(() => {
     const next = () => {
@@ -16,14 +17,11 @@ export const Carousel = () => {
       setCurrent((prev) => prev + 1);
     };
 
-    setTimeout(() => {
-      next();
-    }, 8000);
-  }, [current]);
+    const interval = setInterval(next, 8000);
+    setTimer(interval);
 
-  const previous = () => {
-    setCurrent((prev) => prev - 1);
-  };
+    return () => clearInterval(interval);
+  }, [current]);
 
   return (
     <div className="flex flex-col-reverse relative h-3/4-screen w-full">
@@ -56,7 +54,10 @@ export const Carousel = () => {
                   : "rounded-full h-10 w-10 m-4 border-2 border-white opacity-95 transition-all duration-1000"
               }
               key={id}
-              onClick={() => setCurrent(id)}
+              onClick={() => {
+                timer && clearInterval(timer);
+                setCurrent(index);
+              }}
             />
           );
         })}
