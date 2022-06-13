@@ -25,7 +25,7 @@ export const Carousel = () => {
 
   return (
     <div className="flex flex-col-reverse relative h-3/4-screen w-full">
-      <div className="z-40 overflow-hidden border-4 border-black ">
+      <div>
         {resources.featuredImages.map(({ id, uri, description }, index) => {
           return (
             <NextImage
