@@ -22,7 +22,11 @@ const pages: NavigatePage[] = [
 
 export const Layout = ({ children, showCarousel }: Props) => (
   <>
-    <div className={showCarousel ? "h-screen" : ""}>
+    <div
+      className={
+        showCarousel ? " flex flex-col relative h-screen justify-between" : ""
+      }
+    >
       <Header pages={pages} />
       {showCarousel && <Carousel />}
     </div>
