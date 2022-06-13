@@ -1,8 +1,10 @@
+import { Carousel } from "../Carousel";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 interface Props {
   children: React.ReactNode;
+  showCarousel: boolean;
 }
 
 export type NavigatePage = {
@@ -18,9 +20,12 @@ const pages: NavigatePage[] = [
   { key: "Contato", to: "/contact" },
 ];
 
-export const Layout = ({ children }: Props) => (
+export const Layout = ({ children, showCarousel }: Props) => (
   <>
-    <Header pages={pages} />
+    <div className={showCarousel ? "h-screen" : ""}>
+      <Header pages={pages} />
+      {showCarousel && <Carousel />}
+    </div>
     <main>{children}</main>
     <Footer
       addressLines={[
