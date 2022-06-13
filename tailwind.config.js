@@ -20,6 +20,9 @@ module.exports = {
       maxWidth: {
         "1/2": "50%",
       },
+      opacity: {
+        0: "0",
+      },
     },
   },
   plugins: [],

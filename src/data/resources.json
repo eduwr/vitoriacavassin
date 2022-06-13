@@ -1,0 +1,19 @@
+{
+  "featuredImages": [
+    {
+      "id": 1,
+      "uri": "/assets/images/yoga.png",
+      "description": "yoga"
+    },
+    {
+      "id": 2,
+      "uri": "/assets/images/porch.png",
+      "description": "porch"
+    },
+    {
+      "id": 3,
+      "uri": "/assets/images/playground.png",
+      "description": "playground"
+    }
+  ]
+}
