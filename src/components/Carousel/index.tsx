@@ -1,18 +1,40 @@
 import NextImage from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import resources from "../../data/resources.json";
 
 export const Carousel = () => {
-  const [current, setCurrent] = useState(resources.featuredImages[0].id);
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const next = () => {
+      const rollback = current + 1 === resources.featuredImages.length;
+
+      if (rollback) {
+        return setCurrent(0);
+      }
+
+      setCurrent((prev) => prev + 1);
+    };
+
+    setTimeout(() => {
+      next();
+    }, 5000);
+  }, [current]);
+
+  const previous = () => {
+    setCurrent((prev) => prev - 1);
+  };
 
   return (
-    <div className="relative h-3/4-screen w-full">
+    <div className="flex flex-col-reverse relative h-3/4-screen w-full">
       <div className="z-40 overflow-hidden border-4 border-black ">
-        {resources.featuredImages.map(({ id, uri, description }) => {
+        {resources.featuredImages.map(({ id, uri, description }, index) => {
           return (
             <NextImage
               className={
-                current === id ? "transition-all" : "opacity-0 transition-all"
+                current === index
+                  ? "transition-all duration-1000"
+                  : "opacity-0 transition-all duration-1000"
               }
               key={id}
               src={uri}
@@ -23,12 +45,19 @@ export const Carousel = () => {
           );
         })}
       </div>
-      <div className="z-50 self-end">
-        {resources.featuredImages.map(({ id }) => {
+      <div className="flex justify-center z-50">
+        {resources.featuredImages.map(({ id }, index) => {
+          const selected = current === index;
           return (
-            <button key={id} onClick={() => setCurrent(id)}>
-              value
-            </button>
+            <button
+              className={
+                selected
+                  ? "rounded-full h-10 w-10 bg-yellow m-4 border-2 border-white opacity-95 transition-all duration-1000"
+                  : "rounded-full h-10 w-10 m-4 border-2 border-white opacity-95 transition-all duration-1000"
+              }
+              key={id}
+              onClick={() => setCurrent(id)}
+            />
           );
         })}
       </div>
