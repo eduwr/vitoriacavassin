@@ -7,7 +7,7 @@ export const Carousel = () => {
 
   useEffect(() => {
     const next = () => {
-      const rollback = current + 1 === resources.featuredImages.length;
+      const rollback = current + 1 >= resources.featuredImages.length;
 
       if (rollback) {
         return setCurrent(0);
@@ -18,7 +18,7 @@ export const Carousel = () => {
 
     setTimeout(() => {
       next();
-    }, 5000);
+    }, 8000);
   }, [current]);
 
   const previous = () => {
