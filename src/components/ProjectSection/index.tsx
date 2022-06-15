@@ -12,9 +12,9 @@ const projects = [project, project, project];
 
 export const ProjectSection = () => {
   return (
-    <section className="flex flex-col items-center py-8 px-20 h-1/2-screen relative bg-white">
-      <h1 className="text-5xl font-thin mb-4">PROJETOS</h1>
-      <div className="flex justify-center w-full relative">
+    <section className="flex flex-col items-center justify-evenly py-8 h-1/2-screen bg-white">
+      <h1 className="text-5xl font-thin uppercase">PROJETOS</h1>
+      <div className="flex justify-evenly w-full">
         {projects.map((project, idx) => (
           <ProjectCard key={idx} project={project} />
         ))}
