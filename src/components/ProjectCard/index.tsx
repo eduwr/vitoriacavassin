@@ -13,18 +13,14 @@ interface Props {
 
 export const ProjectCard = ({ project }: Props) => {
   return (
-    <div
-      className="flex flex-col items-center justify-between w-96 min-w-fit px-8 pb-5"
-      style={{ minWidth: "24rem" }}
-    >
-      <div className="relative w-96 h-48">
-        <Image
-          src={project.photoUrl}
-          alt={project.title}
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+    <div className="shadow-xl flex flex-col items-center justify-between w-96 m-2 md:m-0 md:mx-2 pb-5">
+      <Image
+        src={project.photoUrl}
+        alt={project.title}
+        width={384}
+        height={192}
+        objectFit="cover"
+      />
       <h6 className="text-2xl my-2">{project.title}</h6>
       <p className="line-clamp-3 text-base font-thin text-center">
         {project.description}
