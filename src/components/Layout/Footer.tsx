@@ -9,17 +9,17 @@ interface Props {
 
 export const Footer = ({ addressLines, pages }: Props) => {
   return (
-    <footer className="flex flex-col px-20">
-      <div className="py-16 px-24 border-b-2 border-grey">
-        <h3 className="text-4xl text-yellow font-light">
+    <footer className="flex flex-col px-2 md:px-20">
+      <div className="py-8 md:py-16 px-10 md:px-24 border-b-2 border-grey">
+        <h3 className="text-4xl text-yellow font-light text-center md:text-left mb-4 md:mb-0">
           vitoria@vitoriacavassin.com
         </h3>
-        <p className="text-xl text-grey">
+        <p className="text-xl text-grey text-center md:text-left">
           Let tell us know your dream and we will help you make it become
           reality
         </p>
       </div>
-      <div className="flex py-16 px-24">
+      <div className="flex py-8 md:py-16 px-10 md:px-24 flex-col-reverse md:flex-row">
         <div className="max-w-xs mr-16">
           <h3 className="text-black text-3xl mb-4">Escritório</h3>
           {addressLines.map((line) => (
@@ -28,7 +28,7 @@ export const Footer = ({ addressLines, pages }: Props) => {
             </p>
           ))}
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-4 md:mb-0">
           <h3 className="text-black text-3xl mb-4">Links</h3>
           {pages.map(({ key, to }) => (
             <Link key={key} href={to}>
