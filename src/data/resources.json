@@ -15,5 +15,67 @@
       "uri": "/assets/images/playground.png",
       "description": "playground"
     }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Yoga Spa",
+      "shortDescription": "Yoga spa desenvovido com amor e carinho.",
+      "description": "Yoga spa desenvovido com amor e carinho pela arquiteta mais renomada de Curitiba.",
+      "pictures": [
+        "/assets/images/yoga.png"
+      ],
+      "type": "COMMERCIAL"
+    },
+    {
+      "id": 2,
+      "name": "Porch Cabin",
+      "shortDescription": "Porch Cabin desenvovido com amor e carinho.",
+      "description": "Porch Cabin desenvovido com amor e carinho pela arquiteta mais renomada de Curitiba.",
+      "pictures": [
+        "/assets/images/porch.png"
+      ],
+      "type": "COMMERCIAL"
+    },
+    {
+      "id": 3,
+      "name": "Playground",
+      "shortDescription": "Playground desenvovido com amor e carinho",
+      "description": "Playground desenvovido com amor e carinho pela arquiteta mais renomada de Curitiba.",
+      "pictures": [
+        "/assets/images/playground.png"
+      ],
+      "type": "COMMERCIAL"
+    },
+    {
+      "id": 4,
+      "name": "Yoga Spa",
+      "shortDescription": "Yoga spa desenvovido com amor e carinho.",
+      "description": "Yoga spa desenvovido com amor e carinho pela arquiteta mais renomada de Curitiba.",
+      "pictures": [
+        "/assets/images/yoga.png"
+      ],
+      "type": "COMMERCIAL"
+    },
+    {
+      "id": 5,
+      "name": "Porch Cabin",
+      "shortDescription": "Porch Cabin desenvovido com amor e carinho.",
+      "description": "Porch Cabin desenvovido com amor e carinho pela arquiteta mais renomada de Curitiba.",
+      "pictures": [
+        "/assets/images/porch.png"
+      ],
+      "type": "COMMERCIAL"
+    },
+    {
+      "id": 6,
+      "name": "Playground",
+      "shortDescription": "Playground desenvovido com amor e carinho.",
+      "description": "Playground desenvovido com amor e carinho pela arquiteta mais renomada de Curitiba.",
+      "pictures": [
+        "/assets/images/playground.png"
+      ],
+      "type": "COMMERCIAL"
+    }
   ]
 }

@@ -1,18 +1,11 @@
-import { Project, ProjectCard } from "../ProjectCard";
+import { ProjectCard } from "../ProjectCard";
+import db from "../../data/resources.json";
 
-const project: Project = {
-  id: "id",
-  photoUrl: "/assets/images/yoga.png",
-  title: "Yoga Spa",
-  description:
-    "Yoga spa desenvovido com amor e carinho. Yoga spa desenvovido com amor e carinho. Yoga spa desenvovido com amor e carinho.",
-};
-
-const projects = [project, project, project];
+const projects = db.projects.slice(0, 3);
 
 export const ProjectSection = () => {
   return (
-    <section className="flex flex-col items-center justify-evenly py-8 md:h-1/2-screen bg-white">
+    <section className="flex flex-col items-center justify-evenly py-8 md:h-1/2-screen md:min-h-[26rem] bg-white">
       <h1 className="text-4xl font-thin uppercase mb-5 md:mb-0">PROJETOS</h1>
       <div className="flex md:flex-row flex-col items-center justify-evenly w-full">
         {projects.map((project, idx) => (

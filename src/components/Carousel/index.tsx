@@ -24,7 +24,7 @@ export const Carousel = () => {
   }, [current]);
 
   return (
-    <div className="flex flex-col-reverse relative h-3/4-screen w-full">
+    <div className="flex flex-col-reverse relative h-3/4-screen w-full overflow-hidden">
       <div>
         {resources.featuredImages.map(({ id, uri, description }, index) => {
           return (
