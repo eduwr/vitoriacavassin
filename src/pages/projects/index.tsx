@@ -1,15 +1,22 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { ProjectCard } from "../../components/ProjectCard";
+import resources from "../../data/resources.json";
 
 const Projects: NextPage = (props) => {
   return (
-    <div className="container">
+    <div className="">
       <Head>
         <title>Vitória Cavassin | Projetos</title>
         <meta name="description" content="Vitória Cavassin Arquiteta" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Projetos</h1>
+
+      <section className="flex flex-wrap justify-center gap-4">
+        {resources.projects.map((project) => {
+          return <ProjectCard key={project.id} project={project} />;
+        })}
+      </section>
     </div>
   );
 };

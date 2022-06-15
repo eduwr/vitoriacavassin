@@ -8,8 +8,13 @@ interface Props {
 }
 
 export const ProjectCard = ({ project }: Props) => {
+  const handleNavigation = () => {};
+
   return (
-    <div className="shadow-xl flex flex-col items-center justify-between w-96 m-2 md:m-0 md:mx-2 pb-5">
+    <button
+      onClick={handleNavigation}
+      className="shadow-xl flex flex-col items-center justify-between w-96 m-2 md:m-0 md:mx-2 pb-5"
+    >
       <Image
         src={project.pictures[0]}
         alt={project.name}
@@ -21,6 +26,6 @@ export const ProjectCard = ({ project }: Props) => {
       <p className="line-clamp-3 text-base font-thin text-center">
         {project.description}
       </p>
-    </div>
+    </button>
   );
 };
