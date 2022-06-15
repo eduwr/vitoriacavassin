@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import { Navbar } from "./Navbar";
 import { NavigatePage } from ".";
 import { MenuIcon } from "../Icons/MenuIcon";
@@ -23,14 +21,12 @@ export const Header = ({ pages }: Props) => {
       >
         <MenuIcon />
       </button>
-
       <Image
         src="/assets/logo/logo-bg-white.png"
         alt="Logo"
         width={332}
         height={232}
       />
-
       <Navbar pages={pages} showNavModal={showNavModal} />
     </header>
   );
