@@ -10,11 +10,11 @@ interface Props {
 export const Footer = ({ addressLines, pages }: Props) => {
   return (
     <footer className="flex flex-col px-2 md:px-20">
-      <div className="py-8 md:py-16 px-10 md:px-24 border-b-2 border-grey">
-        <h3 className="text-4xl text-yellow font-light text-center md:text-left mb-4 md:mb-0">
+      <div className="py-8 md:py-16 px-2 sm:px-10 md:px-24 border-b-2 border-grey">
+        <h3 className="text-2xl sm:text-4xl text-yellow font-light text-center md:text-left mb-4 md:mb-0">
           vitoria@vitoriacavassin.com
         </h3>
-        <p className="text-xl text-grey text-center md:text-left">
+        <p className="text-base sm:text-xl text-grey text-center md:text-left">
           Let tell us know your dream and we will help you make it become
           reality
         </p>
