@@ -3,9 +3,9 @@ import Head from "next/head";
 import { ProjectCard } from "../../components/ProjectCard";
 import resources from "../../data/resources.json";
 
-const Projects: NextPage = (props) => {
+const Projects: NextPage = () => {
   return (
-    <div className="">
+    <div>
       <Head>
         <title>Vitória Cavassin | Projetos</title>
         <meta name="description" content="Vitória Cavassin Arquiteta" />

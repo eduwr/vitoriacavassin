@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { NavigatePage } from ".";
+import type { NavigatePage } from ".";
 
 interface Props {
   pages: NavigatePage[];
