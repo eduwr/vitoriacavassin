@@ -1,18 +1,11 @@
-import type { NextPage } from "next";
-import { useRouter } from "next/router";
+import type { GetStaticPaths, NextPage, GetStaticProps } from "next";
 import db from "../../data/resources.json";
 
-const projects = db.projects;
+interface Props {
+  project: ReturnType<() => typeof db.projects[0]>;
+}
 
-const ProjectDetails: NextPage = () => {
-  const { query } = useRouter();
-
-  const project = projects.find((project) => project.id === Number(query.id));
-
-  if (!project) {
-    return <div>Project Not Found</div>;
-  }
-
+const ProjectDetails: NextPage<Props> = ({ project }) => {
   return (
     <div className="detail">
       <h1>{project.name}</h1>
@@ -20,6 +13,20 @@ const ProjectDetails: NextPage = () => {
       <p>{project.description}</p>
     </div>
   );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = db.projects.map((project) => ({
+    params: { id: project.id.toString() },
+  }));
+
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const project = db.projects.find((p) => p.id.toString() === params?.id);
+
+  return { props: { project } };
 };
 
 export default ProjectDetails;
