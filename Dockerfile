@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /web
+WORKDIR /usr/src/app/nextjs
 
 COPY package*.json ./
 
