@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NavigatePage } from ".";
+import { LanguageButton } from "../LanguageButton";
 
 interface Props {
   addressLines: string[];
@@ -52,7 +53,12 @@ export const Footer = ({ addressLines, pages }: Props) => {
               height={24}
             />
           </a>
+
+
+          <LanguageButton/>
+
         </div>
+
       </div>
       <p className="self-end text-xs text-grey">
         Development By <span className="font-bold">Wilk Technology</span>
