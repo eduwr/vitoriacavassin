@@ -13,11 +13,11 @@ export type NavigatePage = {
 };
 
 const pages: NavigatePage[] = [
-  { key: "Início", to: "/" },
-  { key: "Sobre", to: "/about" },
-  { key: "Projetos", to: "/projects" },
-  { key: "Novidades", to: "/news" },
-  { key: "Contato", to: "/contact" },
+  { key: "home.nav.home", to: "/" },
+  { key: "home.nav.about", to: "/about" },
+  { key: "home.nav.projects", to: "/projects" },
+  { key: "home.nav.news", to: "/news" },
+  { key: "home.nav.contact", to: "/contact" },
 ];
 
 export const Layout = ({ children, showCarousel }: Props) => (
@@ -27,8 +27,8 @@ export const Layout = ({ children, showCarousel }: Props) => (
         showCarousel ? " flex flex-col relative h-screen justify-between" : ""
       }
     >
-      <Header pages={pages} />
-      {showCarousel && <Carousel />}
+      <Header pages={pages}/>
+      {showCarousel && <Carousel/>}
     </div>
     <main>{children}</main>
     <Footer
