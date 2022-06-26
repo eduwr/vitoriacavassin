@@ -5,7 +5,7 @@
       "uri": "/assets/images/yoga.png",
       "description": "yoga",
       "dictionary": {
-        "us-EN": {
+        "en-US": {
           "description": "yoga"
         },
         "pt-BR": {
@@ -18,7 +18,7 @@
       "uri": "/assets/images/porch.png",
       "description": "porch",
       "dictionary": {
-        "us-EN": {
+        "en-US": {
           "description": "porch"
         },
         "pt-BR": {
@@ -31,7 +31,7 @@
       "uri": "/assets/images/playground.png",
       "description": "playground",
       "dictionary": {
-        "us-EN": {
+        "en-US": {
           "description": "playground"
         },
         "pt-BR": {
@@ -51,7 +51,7 @@
       ],
       "type": "COMMERCIAL",
       "dictionary": {
-        "us-EN": {
+        "en-US": {
           "name": "Yoga Spa",
           "description": "Yoga spa developed with love for the most brilliant architect of Curitiba.",
           "shortDescription": "Yoga spa developed with love."
@@ -73,7 +73,7 @@
       ],
       "type": "COMMERCIAL",
       "dictionary": {
-        "us-EN": {
+        "en-US": {
           "name": "Porch Cabin",
           "description": "Porch Cabin developed with love for the most brilliant architect of Curitiba.",
           "shortDescription": "Porch Cabin developed with love."
@@ -95,7 +95,7 @@
       ],
       "type": "COMMERCIAL",
       "dictionary": {
-        "us-EN": {
+        "en-US": {
           "name": "Playground",
           "description": "Playground developed with love for the most brilliant architect of Curitiba.",
           "shortDescription": "Playground developed with love."
@@ -117,7 +117,7 @@
       ],
       "type": "COMMERCIAL",
       "dictionary": {
-        "us-EN": {
+        "en-US": {
           "name": "Yoga Spa",
           "description": "Yoga spa developed with love for the most brilliant architect of Curitiba.",
           "shortDescription": "Yoga spa developed with love."
@@ -139,7 +139,7 @@
       ],
       "type": "COMMERCIAL",
       "dictionary": {
-        "us-EN": {
+        "en-US": {
           "name": "Porch Cabin",
           "description": "Porch Cabin developed with love for the most brilliant architect of Curitiba.",
           "shortDescription": "Porch Cabin developed with love."
@@ -161,7 +161,7 @@
       ],
       "type": "COMMERCIAL",
       "dictionary": {
-        "us-EN": {
+        "en-US": {
           "name": "Playground",
           "description": "Playground developed with love for the most brilliant architect of Curitiba.",
           "shortDescription": "Playground developed with love."
