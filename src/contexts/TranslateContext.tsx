@@ -16,8 +16,6 @@ interface Props {
 }
 
 export interface TranslateContextValues {
-  dictionary: Dictionary,
-  changeLanguage: (lang: LANGUAGES) => void;
   translate: (key: keyof Dictionary, def?: string) => string | undefined
 }
 
@@ -29,15 +27,9 @@ const langMapping: Record<LANGUAGES, Dictionary> = {
 }
 
 export const TranslateProvider = ({ children }: Props) => {
-
   const { locale } = useRouter()
 
-
   const [ dictionary, setDictionary ] = useState<Dictionary>(langMapping[LANGUAGES.PT_BR])
-
-  const changeLanguage = (lang: LANGUAGES) => {
-    setDictionary(langMapping[lang])
-  }
 
   useEffect(() => {
     setDictionary(langMapping[locale as LANGUAGES] || langMapping[LANGUAGES.PT_BR])
@@ -49,11 +41,7 @@ export const TranslateProvider = ({ children }: Props) => {
 
   return (
     <TranslateContext.Provider
-      value={{
-        dictionary,
-        changeLanguage,
-        translate
-      }}
+      value={{ translate }}
     >
       {children}
     </TranslateContext.Provider>
