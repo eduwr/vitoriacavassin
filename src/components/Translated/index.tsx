@@ -2,11 +2,11 @@ import { useTranslate } from "../../hooks/useTranslate";
 import type { Dictionary } from "../../contexts/TranslateContext";
 
 interface Props {
-  key: keyof Dictionary;
-  defaultMessage?: string;
+  textKey: keyof Dictionary;
+  defaultText?: string;
 }
 
-export const Translated = ({ key, defaultMessage }: Props): JSX.Element => {
+export const Translated = ({ textKey, defaultText }: Props): JSX.Element => {
   const { translate } = useTranslate()
-  return <>{translate(key, defaultMessage)}</>
+  return <>{translate(textKey, defaultText)}</>
 }

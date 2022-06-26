@@ -16,7 +16,7 @@ interface Props {
 }
 
 export interface TranslateContextValues {
-  translate: (key: keyof Dictionary, def?: string) => string | undefined
+  translate: (key: keyof Dictionary, def?: string) => string | null
 }
 
 export const TranslateContext = createContext<TranslateContextValues>({} as TranslateContextValues)
@@ -36,7 +36,7 @@ export const TranslateProvider = ({ children }: Props) => {
   }, [ locale ])
 
   const translate = (key: keyof Dictionary, def?: string) => {
-    return dictionary[key] || def
+    return dictionary[key] || def || null
   }
 
   return (
