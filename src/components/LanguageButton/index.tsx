@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { LANGUAGES } from "../../contexts/TranslateContext";
 
 export const LanguageButton = () => {
   const { asPath, locale } = useRouter()
 
-  const localeTo = locale === "en-US" ? "pt-BR" : "en-US"
-  const iconPath = locale === "en-US" ? "/icons/usa-flag-80.png" : "/icons/brazil-flag-80.png"
-  const altText = locale === "en-US" ? "English" : "Português"
+  const localeTo = locale === LANGUAGES.EN_US ? LANGUAGES.PT_BR : LANGUAGES.EN_US
+  const iconPath = locale === LANGUAGES.EN_US ? "/icons/usa-flag-80.png" : "/icons/brazil-flag-80.png"
+  const altText = locale === LANGUAGES.EN_US ? "English" : "Português"
 
   return (
     <div className="flex items-center">
