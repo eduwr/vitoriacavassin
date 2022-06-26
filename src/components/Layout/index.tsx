@@ -1,14 +1,16 @@
 import { Carousel } from "../Carousel";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import type { Dictionary } from "../../contexts/TranslateContext";
+import type { ReactNode } from "react";
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
   showCarousel: boolean;
 }
 
 export type NavigatePage = {
-  key: string;
+  key: keyof Dictionary;
   to: string;
 };
 

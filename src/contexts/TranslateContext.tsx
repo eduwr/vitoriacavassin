@@ -7,7 +7,7 @@ enum LANGUAGES {
   EN_US = "en-US"
 }
 
-type Dictionary = ReturnType<() => typeof ptBR>
+export type Dictionary = ReturnType<() => typeof ptBR>
 
 const langMapping: Record<LANGUAGES, Dictionary> = {
   [LANGUAGES.PT_BR]: ptBR,
@@ -21,7 +21,7 @@ interface Props {
 export interface TranslateContextValues {
   dictionary: Dictionary,
   changeLanguage: (lang: LANGUAGES) => void;
-  translate: (key: keyof Dictionary, def: string) => string
+  translate: (key: keyof Dictionary, def?: string) => string | undefined
 }
 
 export const TranslateContext = createContext<TranslateContextValues>({} as TranslateContextValues)
@@ -33,7 +33,7 @@ export const TranslateProvider = ({ children }: Props) => {
     setDictionary(langMapping[lang])
   }
 
-  const translate = (key: keyof Dictionary, def: string) => {
+  const translate = (key: keyof Dictionary, def?: string) => {
     return dictionary[key] || def
   }
 

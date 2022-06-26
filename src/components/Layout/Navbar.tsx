@@ -1,24 +1,16 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import type { NavigatePage } from ".";
-import ptBR from "../../lang/pt-BR.json"
-import enUS from "../../lang/en-US.json"
+import { useTranslate } from "../../hooks/useTranslate";
 
 interface Props {
   pages: NavigatePage[];
   showNavModal: boolean;
 }
 
-const languages = {
-  "pt-BR": ptBR,
-  "en-US": enUS
-}
-
 export const Navbar = ({ pages, showNavModal }: Props) => {
-  const { asPath, locale } = useRouter();
-
-  console.log({ locale })
-  const dictionary = languages[locale];
+  const { asPath } = useRouter();
+  const { translate } = useTranslate()
 
   const navClass = showNavModal ? "flex flex-col" : "mt-8 sm:flex hidden";
   const listClass = showNavModal
@@ -35,7 +27,7 @@ export const Navbar = ({ pages, showNavModal }: Props) => {
                   asPath === to && "text-yellow"
                 } px-4 md:px-6 lg:px-10 text-xl md:text-2xl font-light transition-all duration-300 hover:opacity-50 uppercase`}
               >
-                {dictionary[key]}
+                {translate(key)}
               </a>
             </Link>
           </li>
