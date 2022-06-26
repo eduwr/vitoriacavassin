@@ -7,12 +7,11 @@ export const LanguageButton = () => {
   const { asPath, locale } = useRouter()
 
   const localeTo = locale === LANGUAGES.EN_US ? LANGUAGES.PT_BR : LANGUAGES.EN_US
-  const iconPath = locale === LANGUAGES.EN_US ? "/icons/usa-flag-80.png" : "/icons/brazil-flag-80.png"
+  const iconPath = locale === LANGUAGES.PT_BR ? "/icons/usa-flag-80.png" : "/icons/brazil-flag-80.png"
   const altText = locale === LANGUAGES.EN_US ? "English" : "Português"
 
   return (
-    <div className="flex items-center">
-      <p className="mr-3">Language:</p>
+    <div className="flex items-center opacity-50 hover:opacity-100 transition-all duration-1000">
       <Link href={asPath} locale={localeTo}>
         <a className="flex items-center">
           <Image alt={altText} width={32} height={32} src={iconPath}/>
