@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Translated } from "../Translated";
+import { BaseButton } from "../BaseButton";
 
 export const Presentation = () => (
   <section
@@ -19,10 +20,9 @@ export const Presentation = () => (
       <p className="text-2xl text-grey font-thin text-center md:text-left">
         <Translated textKey="home.presentation.description"/>
       </p>
-      <button
-        className="md:self-end py-4 px-8 mt-4 text-2xl text-yellow uppercase border-2 border-yellow rounded-lg hover:text-white hover:bg-yellow transition-all duration-300">
+      <BaseButton outline align="flex-end">
         <Translated textKey="home.presentation.button"/>
-      </button>
+      </BaseButton>
     </div>
   </section>
 );
