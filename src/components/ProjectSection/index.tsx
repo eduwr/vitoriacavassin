@@ -1,15 +1,15 @@
 import { ProjectCard } from "../ProjectCard";
 import db from "../../data/resources.json";
 import { Translated } from "../Translated";
-import Link from "next/link";
+
 import { BaseButton } from "../BaseButton";
 
-const projects = db.projects.slice(0, 3);
+const projects = db.projects.slice(0, 4);
 
-const containerStyle = "flex flex-col items-center justify-evenly py-12 bg-white relative";
+const containerStyle = "flex flex-col items-center justify-evenly bg-white relative";
 
 const headerStyle = {
-  wrapper: "flex w-full px-10 align-top justify-between",
+  wrapper: "flex w-full px-20 mt-12 mb-8 align-top justify-between",
   title: "text-4xl uppercase whitespace-pre-line leading-normal",
   description: "mx-8 mt-1 text-lg max-w-1/2 text-grey font-thin",
 }
@@ -35,11 +35,11 @@ export const ProjectSection = () => {
           <ProjectCard key={project.id} project={project}/>
         ))}
       </div>
-      <Link href="/projects">
-        <a className="">
-          <Translated textKey={"home.projects.see_more"} defaultText={"Ver mais"}/>
-        </a>
-      </Link>
+      {/*<Link href="/projects">*/}
+      {/*  <a className="">*/}
+      {/*    <Translated textKey={"home.projects.see_more"} defaultText={"Ver mais"}/>*/}
+      {/*  </a>*/}
+      {/*</Link>*/}
     </section>
   );
 };

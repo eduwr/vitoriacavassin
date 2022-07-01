@@ -19,18 +19,21 @@ export const ProjectCard = ({ project }: Props) => {
   }
   return (
     <Link href={`/projects/${_project.id}`} passHref>
-      <a className="shadow-xl flex flex-col items-center justify-between w-96 m-2 md:m-0 md:mx-2 pb-5">
+      <a
+        className="flex group relative grayscale hover:grayscale-0 transition-all duration-1000 border-4 overflow-hidden">
         <Image
           src={_project.pictures[0]}
           alt={_project.name}
-          width={384}
-          height={192}
+          width={360}
+          height={600}
           objectFit="cover"
         />
-        <h6 className="text-2xl my-2">{_project.name}</h6>
-        <p className="line-clamp-3 text-base font-thin text-center">
-          {_project.description}
-        </p>
+        <div
+          className="translate-y-20 group-hover:translate-y-0 flex flex-col items-start absolute bottom-0 px-5 w-full h-20 bg-black opacity-50 transition-all duration-1000 ">
+          <h6 className="text-white text-2xl my-2">{_project.name}</h6>
+          <p className="line-clamp-3 text-base font-thin text-center text-white opacity-70">
+            {_project.location}
+          </p></div>
       </a>
     </Link>
   );
