@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import db from '../../data/resources.json';
+import db from '../../utils/resources.json';
 
 type ErrorResponse = { message: string }
 type Data = ReturnType<() => typeof db.projects>

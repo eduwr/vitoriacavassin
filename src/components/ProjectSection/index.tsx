@@ -1,5 +1,5 @@
 import { ProjectCard } from "../ProjectCard";
-import db from "../../data/resources.json";
+import db from "../../utils/resources.json";
 import { Translated } from "../Translated";
 
 import { BaseButton } from "../BaseButton";
@@ -9,10 +9,12 @@ const projects = db.projects.slice(0, 4);
 const containerStyle = "flex flex-col items-center justify-evenly bg-white relative";
 
 const headerStyle = {
-  wrapper: "flex w-full px-20 mt-12 mb-8 align-top justify-between",
-  title: "text-4xl uppercase whitespace-pre-line leading-normal",
-  description: "mx-8 mt-1 text-lg max-w-1/2 text-grey font-thin",
+  wrapper: "flex md:flex-row w-full px-5 sm:px-20 mt-12 mb-8 align-top justify-between",
+  title: "text-3xl sm:text-4xl uppercase whitespace-pre-line leading-normal",
+  description: "hidden md:flex mx-8 mt-1 text-xs md:text-lg max-w-1/2 text-grey font-thin",
 }
+
+const contentStyle = "flex gap-2 px-5 md:flex-row flex-col items-center justify-evenly w-full mb-12"
 
 export const ProjectSection = () => {
   return (
@@ -30,7 +32,7 @@ export const ProjectSection = () => {
         </BaseButton>
       </div>
 
-      <div className="flex md:flex-row flex-col items-center justify-evenly w-full">
+      <div className={contentStyle}>
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project}/>
         ))}
@@ -40,6 +42,7 @@ export const ProjectSection = () => {
       {/*    <Translated textKey={"home.projects.see_more"} defaultText={"Ver mais"}/>*/}
       {/*  </a>*/}
       {/*</Link>*/}
+      <div className="text-"></div>
     </section>
   );
 };

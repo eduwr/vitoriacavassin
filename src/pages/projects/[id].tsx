@@ -1,5 +1,5 @@
 import type { GetStaticPaths, NextPage, GetStaticProps } from "next";
-import db from "../../data/resources.json";
+import db from "../../utils/resources.json";
 
 interface Props {
   project: ReturnType<() => typeof db.projects[0]>;

@@ -1,10 +1,10 @@
 import NextImage from "next/image";
 import { useEffect, useState } from "react";
-import resources from "../../data/resources.json";
+import resources from "../../utils/resources.json";
 
 export const Carousel = () => {
-  const [current, setCurrent] = useState(0);
-  const [timer, setTimer] = useState<NodeJS.Timer>();
+  const [ current, setCurrent ] = useState(0);
+  const [ timer, setTimer ] = useState<NodeJS.Timer>();
 
   useEffect(() => {
     const next = () => {
@@ -21,7 +21,7 @@ export const Carousel = () => {
     setTimer(interval);
 
     return () => clearInterval(interval);
-  }, [current]);
+  }, [ current ]);
 
   return (
     <div className="flex flex-col-reverse relative h-3/4-screen w-full overflow-hidden">
