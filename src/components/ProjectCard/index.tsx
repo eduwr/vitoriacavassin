@@ -19,7 +19,7 @@ export const ProjectCard = ({ project }: Props) => {
   const { locale } = useRouter();
   const { width } = useWindowDimensions();
 
-  const isSmall = width <= BREAKPOINTS.MEDIUM;
+  const isSmall = width && width <= BREAKPOINTS.MEDIUM;
 
   const _project: Project = {
     ...project,
@@ -39,7 +39,7 @@ export const ProjectCard = ({ project }: Props) => {
         />
         <div
           className={infoStyle}>
-          <h6 className="text-white text-2xl my-2">{_project.name}</h6>
+          <h6 className="text-white text-2xl md:text-lg lg:text-2xl my-2">{_project.name}</h6>
           <p className="text-base font-thin text-white opacity-70">
             {_project.location}
           </p>
