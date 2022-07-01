@@ -23,11 +23,10 @@ export const ProjectSection = () => {
           <Translated textKey="home.projects.title"/>
         </h1>
         <p className={headerStyle.description}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
-          standard dummy text ever since the 1500s
+          <Translated textKey="home.projects.description"/>
         </p>
         <BaseButton>
-          Ver mais
+          <Translated textKey="home.projects.see_more"/>
         </BaseButton>
       </div>
 
