@@ -20,7 +20,10 @@ export const Presentation = () => (
       <p className="text-2xl text-grey font-thin text-center md:text-left">
         <Translated textKey="home.presentation.description"/>
       </p>
-      <BaseButton outline align="flex-end">
+      <BaseButton outline style={{
+        alignSelf: "flex-end",
+        marginTop: "2rem"
+      }}>
         <Translated textKey="home.presentation.button"/>
       </BaseButton>
     </div>
